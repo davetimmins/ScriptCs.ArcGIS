@@ -16,3 +16,7 @@ var gateway = arcgis.CreateGateway("http://services.arcgisonline.com/arcgis");
 
 Refer to the [ArcGIS.PCL](https://github.com/davetimmins/ArcGIS.PCL) project for more information on what you can call.
 
+
+###Note
+
+Currently this requires NuGet 2.8.1 so `scriptcs -install ScriptCs.ArcGIS` will fail until `v0.10.0` of `ScriptCs` I think.
