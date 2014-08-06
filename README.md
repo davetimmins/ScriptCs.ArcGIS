@@ -1,9 +1,8 @@
-ScriptCs.ArcGIS
-===============
+# [![ScriptCs](https://secure.gravatar.com/avatar/5c754f646971d8bc800b9d4057931938?s=120)](http://scriptcs.net/) [![ArcGIS.PCL](https://raw.githubusercontent.com/davetimmins/ArcGIS.PCL/master/gateway.png)](https://github.com/davetimmins/ArcGIS.PCL)
 
 [![Build status](https://ci.appveyor.com/api/projects/status/8x5it4k9oducbm7i)](https://ci.appveyor.com/project/davetimmins/scriptcs-arcgis)  [![NuGet Status](http://img.shields.io/nuget/v/ScriptCs.ArcGIS.svg?style=flat)](https://www.nuget.org/packages/ScriptCs.ArcGIS/)
 
-A ScriptCs script pack for [ArcGIS.PCL](https://github.com/davetimmins/ArcGIS.PCL)
+A [scriptcs](https://github.com/scriptcs/scriptcs) [script pack](https://github.com/scriptcs/scriptcs/wiki/Script-Packs-master-list) for [ArcGIS.PCL](https://github.com/davetimmins/ArcGIS.PCL)
 
 ###Quick Start
 
@@ -13,6 +12,8 @@ var gateway = arcgis.CreateGateway("http://services.arcgisonline.com/arcgis");
 
 // Now do whatever you want!
 ```
+
+###Going further
 
 The returned `gateway` supports the following as typed operations:
 
