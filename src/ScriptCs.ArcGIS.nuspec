@@ -2,13 +2,13 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
 	<metadata minClientVersion="2.8.1">
 		<id>ScriptCs.ArcGIS</id>
-		<version>0.1.0</version>
+		<version>0.2.0</version>
 		<title>ScriptCs Pack for ArcGIS.PCL</title>
 		<authors>Dave Timmins</authors>
 		<projectUrl>https://github.com/davetimmins/ScriptCs.ArcGIS</projectUrl>
 		<licenseUrl>https://github.com/davetimmins/ScriptCs.ArcGIS/blob/master/LICENSE.txt</licenseUrl>
-		<iconUrl>https://raw.githubusercontent.com/davetimmins/ArcGIS.PCL/master/gateway.png</iconUrl>
-		<requireLicenseAcceptance>false</requireLicenseAcceptance>		
+		<iconUrl>https://raw.githubusercontent.com/davetimmins/ScriptCs.ArcGIS/master/arcgispcl-scriptcs.png</iconUrl>
+		<requireLicenseAcceptance>false</requireLicenseAcceptance>
 		<description>
 			A ScriptCs script pack for ArcGIS.PCL.
 		</description>
@@ -16,7 +16,7 @@
 		<dependencies>
 			<dependency id="ArcGIS.PCL" version="4.0.0" />
 			<dependency id="ArcGIS.PCL.JsonDotNetSerializer" version="1.0.0" />
-			<dependency id="ScriptCs.Contracts" version="0.9.0" />
+			<dependency id="ScriptCs.Contracts" version="0.10.2" />
 		</dependencies>
 	</metadata>
 	<files>

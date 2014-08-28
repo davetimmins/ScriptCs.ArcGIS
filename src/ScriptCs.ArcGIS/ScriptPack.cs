@@ -14,6 +14,8 @@ namespace ScriptCs.ArcGIS
 
         void IScriptPack.Initialize(IScriptPackSession session)
         {
+            Guard.AgainstNullArgument("session", session);
+
             session.ImportNamespace("ArcGIS.ServiceModel");
             session.ImportNamespace("ArcGIS.ServiceModel.Common");
             session.ImportNamespace("ArcGIS.ServiceModel.GeoJson");
