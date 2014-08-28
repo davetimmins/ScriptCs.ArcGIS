@@ -1,31 +1,36 @@
 ﻿using System;
 using ScriptCs.Contracts;
-
+using System.Collections.Generic;
 
 namespace ScriptCs.ArcGIS
 {
     public class ArcGISScriptPack : IScriptPack
     {
-        IScriptPackContext IScriptPack.GetContext()
+        public IScriptPackContext GetContext()
         {
             //Return the ScriptPackContext to be used in your scripts
             return new ArcGISPack();
         }
 
-        void IScriptPack.Initialize(IScriptPackSession session)
+        public void Initialize(IScriptPackSession session)
         {
             Guard.AgainstNullArgument("session", session);
 
-            session.ImportNamespace("ArcGIS.ServiceModel");
-            session.ImportNamespace("ArcGIS.ServiceModel.Common");
-            session.ImportNamespace("ArcGIS.ServiceModel.GeoJson");
-            session.ImportNamespace("ArcGIS.ServiceModel.Operation");
-            session.ImportNamespace("ArcGIS.ServiceModel.Serializers");
+            var namespaces = new List<String>
+            {
+                "ArcGIS.ServiceModel",
+                "ArcGIS.ServiceModel.Common",
+                "ArcGIS.ServiceModel.GeoJson",
+                "ArcGIS.ServiceModel.Operation",
+                "ArcGIS.ServiceModel.Operation.Admin",
+                "ArcGIS.ServiceModel.Serializers"
+            };
+
+            namespaces.ForEach(session.ImportNamespace);
         }
 
-        void IScriptPack.Terminate()
+        public void Terminate()
         {
-            //Cleanup any resources here
         }
     }
 }
