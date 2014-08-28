@@ -10,6 +10,13 @@ namespace ScriptCs.ArcGIS
         public ArcGISPack()
         {
             JsonDotNetSerializer.Init();
+            EncryptTokenRequests = false;
+        }
+
+        public bool EncryptTokenRequests
+        {
+            get { return !CryptoProviderFactory.Disabled; }
+            set { CryptoProviderFactory.Disabled = !value; }
         }
 
         public PortalGateway CreateGateway(String rootUrl, String username = "", String password = "")
@@ -21,7 +28,7 @@ namespace ScriptCs.ArcGIS
                 CreateGateway(rootUrl, tokenProvider: new TokenProvider(rootUrl, username, password));
         }
 
-        public PortalGateway CreateGateway(String rootUrl, ITokenProvider tokenProvider = null)
+        public PortalGateway CreateGateway(String rootUrl, ITokenProvider tokenProvider)
         {
             Guard.AgainstNullArgument("rootUrl", rootUrl);
 
@@ -35,7 +42,7 @@ namespace ScriptCs.ArcGIS
                 CreateArcGISOnlineGateway(tokenProvider: new ArcGISOnlineTokenProvider(username, password));
         }
 
-        public ArcGISOnlineGateway CreateArcGISOnlineGateway(ITokenProvider tokenProvider = null)
+        public ArcGISOnlineGateway CreateArcGISOnlineGateway(ITokenProvider tokenProvider)
         {
             return new ArcGISOnlineGateway(tokenProvider: tokenProvider);
         }

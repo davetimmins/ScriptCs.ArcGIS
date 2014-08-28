@@ -8,6 +8,18 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		ScriptCs.ArcGIS.nuspec = ScriptCs.ArcGIS.nuspec
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "samples", "samples", "{271DBFC0-2CA9-42BD-8FA6-C167C8902350}"
+	ProjectSection(SolutionItems) = preProject
+		samples\geocode.csx = samples\geocode.csx
+		samples\packages.config = samples\packages.config
+		samples\query.csx = samples\query.csx
+		samples\queryandreversegeocode.csx = samples\queryandreversegeocode.csx
+		samples\readme.md = samples\readme.md
+		samples\reversegeocode.csx = samples\reversegeocode.csx
+		samples\servicestatus.csx = samples\servicestatus.csx
+		samples\start.csx = samples\start.csx
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
