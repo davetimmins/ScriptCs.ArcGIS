@@ -37,11 +37,13 @@ The returned `gateway` supports the following as typed operations:
 
 In all cases above `T` is a geometry type of `Point`, `MultiPoint`, `Polyline`, `Polygon` or `Extent`
 
- If you need to call secure resources and your ArcGIS Server supports token based authentication then specify a `TokenProvider` in your call to `CreateGateway`
+ If you need to call secure resources and your ArcGIS Server supports token based authentication then specify a `TokenProvider` in your call to `CreateGateway` or if the token service is at the same root url then you can just pass in the username and password
 
  ```csharp
  var arcgis = Require<ArcGISPack>();
- var gateway = arcgis.CreateGateway("http://localhost/arcgis", new TokenProvider("http://localhost/arcgis", "username", "password"));
+ var gateway = arcgis.CreateGateway("http://localhost/arcgis", new TokenProvider("http://otherhost/arcgis", "username", "password"));
+ 
+ var gateway2 = arcgis.CreateGateway("http://localhost/arcgis", "username", "password");
  ```
 
 
