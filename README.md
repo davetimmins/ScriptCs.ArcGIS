@@ -1,4 +1,6 @@
-# [![ScriptCs](https://secure.gravatar.com/avatar/5c754f646971d8bc800b9d4057931938?s=120)](http://scriptcs.net/) [![ArcGIS.PCL](https://raw.githubusercontent.com/davetimmins/ArcGIS.PCL/master/gateway.png)](https://github.com/davetimmins/ArcGIS.PCL)
+<img align="right" height="120" src="https://raw.githubusercontent.com/davetimmins/ScriptCs.ArcGIS/master/arcgispcl-scriptcs.png">
+
+### ScriptCs.ArcGIS
 
 [![Build status](https://ci.appveyor.com/api/projects/status/8x5it4k9oducbm7i)](https://ci.appveyor.com/project/davetimmins/scriptcs-arcgis)  [![NuGet Status](http://img.shields.io/nuget/v/ScriptCs.ArcGIS.svg?style=flat)](https://www.nuget.org/packages/ScriptCs.ArcGIS/)
 
