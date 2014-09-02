@@ -9,9 +9,18 @@ if (String.IsNullOrEmpty(username) || String.IsNullOrEmpty(password))
 }
 else
 {
+  // Uncomment this to encrypt the token generation requests
+  // arcgis.EncryptTokenRequests = true;
+
+  // first way
   var gateway = arcgis.CreateGateway(serverUrl, username, password);
   var token = gateway.TokenProvider.CheckGenerateToken(CancellationToken.None).Result;
 
   Console.WriteLine(String.Format("Token expires at {0:g}", token.Expiry.FromUnixTime().ToLocalTime()));
   Console.WriteLine(token.Value);
+
+  // second way
+  var otherToken = new TokenProvider(serverUrl, username, password).CheckGenerateToken(CancellationToken.None).Result;
+  Console.WriteLine(String.Format("Token expires at {0:g}", otherToken.Expiry.FromUnixTime().ToLocalTime()));
+  Console.WriteLine(otherToken.Value);
 }
