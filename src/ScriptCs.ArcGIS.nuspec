@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
 	<metadata minClientVersion="2.8.1">
 		<id>ScriptCs.ArcGIS</id>
-		<version>0.2.0</version>
+		<version>0.2.1</version>
 		<title>ScriptCs Pack for ArcGIS.PCL</title>
 		<authors>Dave Timmins</authors>
 		<projectUrl>https://github.com/davetimmins/ScriptCs.ArcGIS</projectUrl>
