@@ -24,11 +24,11 @@ module.exports = function (grunt) {
             }
         }
     });
-   
+
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-shell');
     grunt.loadNpmTasks('grunt-msbuild');
     grunt.loadNpmTasks('grunt-nuget');
-    
+
     grunt.registerTask('default', ['clean', 'shell', 'msbuild', 'nugetpack']);
 };

@@ -44,6 +44,8 @@ namespace ScriptCs.ArcGIS
 
         public ArcGISOnlineGateway CreateArcGISOnlineGateway(ITokenProvider tokenProvider)
         {
+            Guard.AgainstNullArgument("tokenProvider", tokenProvider);
+
             return new ArcGISOnlineGateway(tokenProvider: tokenProvider);
         }
     }

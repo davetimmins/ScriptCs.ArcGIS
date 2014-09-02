@@ -23,9 +23,9 @@ namespace ScriptCs.ArcGIS
                 "ArcGIS.ServiceModel.GeoJson",
                 "ArcGIS.ServiceModel.Operation",
                 "ArcGIS.ServiceModel.Operation.Admin",
-                "ArcGIS.ServiceModel.Serializers"
+                "ArcGIS.ServiceModel.Serializers",
+                "System.Threading"
             };
-
             namespaces.ForEach(session.ImportNamespace);
         }
 
