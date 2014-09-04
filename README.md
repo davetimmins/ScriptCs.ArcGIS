@@ -2,7 +2,7 @@
 
 ### ScriptCs.ArcGIS
 
-[![Build Status](https://travis-ci.org/davetimmins/ScriptCs.ArcGIS.svg?branch=master)](https://travis-ci.org/davetimmins/ScriptCs.ArcGIS) [![Build status](https://ci.appveyor.com/api/projects/status/8x5it4k9oducbm7i)](https://ci.appveyor.com/project/davetimmins/scriptcs-arcgis)  [![NuGet Status](http://img.shields.io/nuget/v/ScriptCs.ArcGIS.svg?style=flat)](https://www.nuget.org/packages/ScriptCs.ArcGIS/)
+[![Build Status](https://travis-ci.org/davetimmins/ScriptCs.ArcGIS.svg?branch=master)](https://travis-ci.org/davetimmins/ScriptCs.ArcGIS) [![Build status](https://ci.appveyor.com/api/projects/status/8x5it4k9oducbm7i?svg=true)](https://ci.appveyor.com/project/davetimmins/scriptcs-arcgis)  [![NuGet Status](http://img.shields.io/nuget/v/ScriptCs.ArcGIS.svg?style=flat)](https://www.nuget.org/packages/ScriptCs.ArcGIS/)
 
 A [scriptcs](https://github.com/scriptcs/scriptcs) [script pack](https://github.com/scriptcs/scriptcs/wiki/Script-Packs-master-list) for [ArcGIS.PCL](https://github.com/davetimmins/ArcGIS.PCL)
 
