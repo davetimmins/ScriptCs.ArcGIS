@@ -2,6 +2,7 @@
 using ArcGIS.ServiceModel.Serializers;
 using ScriptCs.Contracts;
 using System;
+using System.Net;
 
 namespace ScriptCs.ArcGIS
 {
@@ -9,8 +10,14 @@ namespace ScriptCs.ArcGIS
     {
         public ArcGISPack()
         {
+            // initialise the default serializer
             JsonDotNetSerializer.Init();
+
+            // don't try to encrypt token requests by default
             EncryptTokenRequests = false;
+
+            // allow self signed certificates
+            ServicePointManager.ServerCertificateValidationCallback = (sender, certificate, chain, errors) => true;
         }
 
         public bool EncryptTokenRequests

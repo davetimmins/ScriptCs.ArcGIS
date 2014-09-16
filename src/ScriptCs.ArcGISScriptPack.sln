@@ -21,6 +21,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "samples", "samples", "{271D
 		samples\reversegeocode.csx = samples\reversegeocode.csx
 		samples\servicestatus.csx = samples\servicestatus.csx
 		samples\start.csx = samples\start.csx
+		samples\stopservices.csx = samples\stopservices.csx
 		samples\token.csx = samples\token.csx
 	EndProjectSection
 EndProject
