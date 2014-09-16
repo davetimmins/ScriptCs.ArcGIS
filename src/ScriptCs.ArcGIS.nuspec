@@ -14,7 +14,7 @@
 		</description>
 		<tags>ArcGIS ArcGISServer ArcGISOnline Esri REST PCL GIS GeoJSON Geo Json Mapping Map Location GeoLocation OAuth scriptcs</tags>
 		<dependencies>
-			<dependency id="ArcGIS.PCL" version="4.0.0" />
+			<dependency id="ArcGIS.PCL" version="4.1.1" />
 			<dependency id="ArcGIS.PCL.JsonDotNetSerializer" version="1.0.0" />
 			<dependency id="ScriptCs.Contracts" version="0.10.2" />
 		</dependencies>
