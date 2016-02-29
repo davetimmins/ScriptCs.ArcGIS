@@ -3,7 +3,7 @@ var arcgis = Require<ArcGISPack>();
 var serverUrl = "";
 var username= "";
 var password = "";
-if (String.IsNullOrEmpty(username) || String.IsNullOrEmpty(password))
+if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
 {
   Console.WriteLine("Uh-oh spaghetti-o, looks like you forgot to set the user credentials.");
 }
@@ -23,7 +23,7 @@ else
   foreach (var service in services)
   {
     var sd = service.AsServiceDescription();
-    if (String.Equals("STARTED", service.Status.Actual, StringComparison.OrdinalIgnoreCase))
+    if (string.Equals("STARTED", service.Status.Actual, stringComparison.OrdinalIgnoreCase))
     {
       Console.WriteLine("Stopping " + sd.Name);
       var stoppedResult = gateway.StopService(sd).Result;

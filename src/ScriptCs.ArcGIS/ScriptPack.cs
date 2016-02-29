@@ -1,9 +1,8 @@
-﻿using System;
-using ScriptCs.Contracts;
-using System.Collections.Generic;
-
-namespace ScriptCs.ArcGIS
+﻿namespace ScriptCs.ArcGIS
 {
+    using ScriptCs.Contracts;
+    using System.Collections.Generic;
+
     public class ArcGISScriptPack : IScriptPack
     {
         public IScriptPackContext GetContext()
@@ -16,7 +15,7 @@ namespace ScriptCs.ArcGIS
         {
             Guard.AgainstNullArgument("session", session);
 
-            var namespaces = new List<String>
+            var namespaces = new List<string>
             {
                 "ArcGIS.ServiceModel",
                 "ArcGIS.ServiceModel.Common",

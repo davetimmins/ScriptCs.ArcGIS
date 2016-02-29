@@ -1,11 +1,10 @@
-﻿using ArcGIS.ServiceModel;
-using ArcGIS.ServiceModel.Serializers;
-using ScriptCs.Contracts;
-using System;
-using System.Net;
-
-namespace ScriptCs.ArcGIS
+﻿namespace ScriptCs.ArcGIS
 {
+    using global::ArcGIS.ServiceModel;
+    using global::ArcGIS.ServiceModel.Serializers;
+    using ScriptCs.Contracts;
+    using System.Net;
+
     public class ArcGISPack : IScriptPackContext
     {
         public ArcGISPack()
@@ -26,25 +25,25 @@ namespace ScriptCs.ArcGIS
             set { CryptoProviderFactory.Disabled = !value; }
         }
 
-        public PortalGateway CreateGateway(String rootUrl, String username = "", String password = "")
+        public PortalGateway CreateGateway(string rootUrl, string username = "", string password = "")
         {
             Guard.AgainstNullArgument("rootUrl", rootUrl);
 
-            return String.IsNullOrWhiteSpace(username) || String.IsNullOrWhiteSpace(password) ?
+            return string.IsNullOrWhiteSpace(username) || string.IsNullOrWhiteSpace(password) ?
                 new PortalGateway(rootUrl) :
                 CreateGateway(rootUrl, tokenProvider: new TokenProvider(rootUrl, username, password));
         }
 
-        public PortalGateway CreateGateway(String rootUrl, ITokenProvider tokenProvider)
+        public PortalGateway CreateGateway(string rootUrl, ITokenProvider tokenProvider)
         {
             Guard.AgainstNullArgument("rootUrl", rootUrl);
 
             return new PortalGateway(rootUrl, tokenProvider: tokenProvider);
         }
 
-        public ArcGISOnlineGateway CreateArcGISOnlineGateway(String username = "", String password = "")
+        public ArcGISOnlineGateway CreateArcGISOnlineGateway(string username = "", string password = "")
         {
-            return String.IsNullOrWhiteSpace(username) || String.IsNullOrWhiteSpace(password) ?
+            return string.IsNullOrWhiteSpace(username) || string.IsNullOrWhiteSpace(password) ?
                 new ArcGISOnlineGateway() :
                 CreateArcGISOnlineGateway(tokenProvider: new ArcGISOnlineTokenProvider(username, password));
         }

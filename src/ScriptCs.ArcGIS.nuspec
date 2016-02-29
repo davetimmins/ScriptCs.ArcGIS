@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
 	<metadata minClientVersion="2.8.1">
 		<id>ScriptCs.ArcGIS</id>
-		<version>0.3.0</version>
+		<version>0.3.1</version>
 		<title>ScriptCs Pack for ArcGIS.PCL</title>
 		<authors>Dave Timmins</authors>
 		<projectUrl>https://github.com/davetimmins/ScriptCs.ArcGIS</projectUrl>
@@ -14,9 +14,9 @@
 		</description>
 		<tags>ArcGIS ArcGISServer ArcGISOnline Esri REST PCL GIS GeoJSON Geo Json Mapping Map Location GeoLocation OAuth scriptcs</tags>
 		<dependencies>
-			<dependency id="ArcGIS.PCL" version="4.1.1" />
-			<dependency id="ArcGIS.PCL.JsonDotNetSerializer" version="1.0.0" />
-			<dependency id="ScriptCs.Contracts" version="0.10.2" />
+			<dependency id="ArcGIS.PCL" version="5.1.0" />
+			<dependency id="ArcGIS.PCL.JsonDotNetSerializer" version="2.0.2" />
+			<dependency id="ScriptCs.Contracts" version="0.15.0" />
 		</dependencies>
 	</metadata>
 	<files>

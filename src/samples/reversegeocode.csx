@@ -14,7 +14,7 @@ var reverseGeocode = new ReverseGeocode("/World/GeocodeServer/".AsEndpoint())
   }
 };
 var result = gateway.ReverseGeocode(reverseGeocode).Result;
-Console.WriteLine(String.Format("{0}, {1}, {2}, {3}",
+Console.WriteLine(string.Format("{0}, {1}, {2}, {3}",
   result.Address.AddressText,
   result.Address.City,
   result.Address.Region,

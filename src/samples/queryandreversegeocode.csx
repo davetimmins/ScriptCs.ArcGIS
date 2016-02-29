@@ -5,7 +5,7 @@ var query = new Query(@"/Earthquakes/EarthquakesFromLastSevenDays/MapServer/0".A
 {
   Where = "magnitude > 5.2",
   ReturnGeometry = true,
-  OutFields = new List<String> { "magnitude" }
+  OutFields = new List<string> { "magnitude" }
 };
 
 var result = gateway.Query<Point>(query).Result;
@@ -29,7 +29,7 @@ foreach (var feature in result.Features)
   try
   {
   var resultGeocode = gatewayGeocode.ReverseGeocode(reverseGeocode).Result;
-  Console.WriteLine(String.Format("Magnitude {0} quake at {1}, {2}, {3}, {4}",
+  Console.WriteLine(string.Format("Magnitude {0} quake at {1}, {2}, {3}, {4}",
     feature.Attributes["magnitude"],
     resultGeocode.Address.AddressText,
     resultGeocode.Address.City,
@@ -39,6 +39,6 @@ foreach (var feature in result.Features)
   catch (Exception ex)
   {
     // some locations may not be at a valid address
-    Console.WriteLine(String.Format("Magnitude {0} quake at x:{1:N6}, y:{2:N6}", feature.Attributes["magnitude"], feature.Geometry.X, feature.Geometry.Y));
+    Console.WriteLine(string.Format("Magnitude {0} quake at x:{1:N6}, y:{2:N6}", feature.Attributes["magnitude"], feature.Geometry.X, feature.Geometry.Y));
   }
 }

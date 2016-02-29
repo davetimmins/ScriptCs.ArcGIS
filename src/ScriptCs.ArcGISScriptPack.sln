@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScriptCs.ArcGIS", "ScriptCs.ArcGIS\ScriptCs.ArcGIS.csproj", "{97F549B0-B8AE-4908-850E-F36568124B95}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{E7838918-7FF8-4DD8-8C1D-C3DC27EE8449}"
@@ -15,6 +17,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "samples", "samples", "{271D
 	ProjectSection(SolutionItems) = preProject
 		samples\geocode.csx = samples\geocode.csx
 		samples\packages.config = samples\packages.config
+		samples\pagedquery.csx = samples\pagedquery.csx
 		samples\query.csx = samples\query.csx
 		samples\queryandreversegeocode.csx = samples\queryandreversegeocode.csx
 		samples\readme.md = samples\readme.md

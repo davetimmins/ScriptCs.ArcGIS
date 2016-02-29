@@ -9,5 +9,5 @@ var resultGeocode = gateway.Geocode(geocode).Result;
 foreach (var result in resultGeocode.Results)
 {
   var feature = result.Feature;
-  Console.WriteLine(String.Format("{0}, x:{1:N6}, y:{2:N6}", result.Name, feature.Geometry.X, feature.Geometry.Y));
+  Console.WriteLine(string.Format("{0}, x:{1:N6}, y:{2:N6}", result.Name, feature.Geometry.X, feature.Geometry.Y));
 }
