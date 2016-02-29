@@ -10,8 +10,8 @@ var count = Task.Run(async () => {
 
 var current = 0;
 var pageSize = 10;
-
 var resultCount = 0;
+var cycles = 0;
 
 while (current < count)
 {
@@ -26,10 +26,11 @@ while (current < count)
     }).Result;
 
     current += pageSize;
+    cycles++;
 
     resultCount += results.Features.Count();
 }
 
-Console.WriteLine(string.Format("Downloaded {0} {1}.", resultCount, resultCount == 1 ? "feature" : "features"));
+Console.WriteLine(string.Format("Downloaded {0} {1} in {2} {3}.", resultCount, resultCount == 1 ? "feature" : "features", cycles, cycles == 1 ? "cycle" : "cycles"));
 
     
