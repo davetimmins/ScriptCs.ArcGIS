@@ -8,9 +8,12 @@ var query = new Query(@"/Earthquakes/EarthquakesFromLastSevenDays/MapServer/0".A
   OutFields = new List<string> { "magnitude" }
 };
 
-var result = gateway.Query<Point>(query).Result;
+var result = Task.Run(async () => {
+    return await gateway.Query<Point>(query);
+}).Result;
 
 foreach (var feature in result.Features)
 {
   Console.WriteLine(string.Format("Magnitude {0} quake at x:{1:N6}, y:{2:N6}", feature.Attributes["magnitude"], feature.Geometry.X, feature.Geometry.Y));
 }
+

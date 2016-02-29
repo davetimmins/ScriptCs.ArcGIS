@@ -4,7 +4,10 @@ var gateway = arcgis.CreateGateway("http://sampleserver6.arcgisonline.com/arcgis
 var endpoint = @"/Energy/Geology/MapServer/0".AsEndpoint();
 var queryCount = new QueryForCount(endpoint);
 
-var count = gateway.QueryForCount(queryCount).Result.NumberOfResults;
+var count = Task.Run(async () => {
+    return await gateway.QueryForCount(queryCount);
+}).Result.NumberOfResults;
+
 var current = 0;
 var pageSize = 10;
 
@@ -17,12 +20,14 @@ while (current < count)
         ResultOffset = current,
         ResultRecordCount = pageSize
     };
-
-    var results = gateway.Query(query).Result;
+    
+    var results = Task.Run(async () => {
+        return await gateway.Query<Point>(query);
+    }).Result;
 
     current += pageSize;
 
-    resultCount += results.features.Count();
+    resultCount += results.Features.Count();
 }
 
 Console.WriteLine(string.Format("Downloaded {0} {1}.", resultCount, resultCount == 1 ? "feature" : "features"));

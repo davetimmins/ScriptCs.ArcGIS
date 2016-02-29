@@ -16,12 +16,12 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "samples", "samples", "{271DBFC0-2CA9-42BD-8FA6-C167C8902350}"
 	ProjectSection(SolutionItems) = preProject
 		samples\geocode.csx = samples\geocode.csx
-		samples\packages.config = samples\packages.config
 		samples\pagedquery.csx = samples\pagedquery.csx
 		samples\query.csx = samples\query.csx
 		samples\queryandreversegeocode.csx = samples\queryandreversegeocode.csx
 		samples\readme.md = samples\readme.md
 		samples\reversegeocode.csx = samples\reversegeocode.csx
+		samples\scriptcs_packages.config = samples\scriptcs_packages.config
 		samples\servicestatus.csx = samples\servicestatus.csx
 		samples\start.csx = samples\start.csx
 		samples\stopservices.csx = samples\stopservices.csx
